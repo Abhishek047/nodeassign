@@ -1,0 +1,30 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const config = require('config');
+
+const app = express();
+app.use(express.json());
+
+
+const db = config.get('mongoURI');
+
+mongoose.connect
+( 
+    db, 
+    {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    }
+)
+.then(()=> console.log('Connected to MongoDB...'))
+.catch(err => console.log(err));
+
+app.use("/api/user", require('./api/userControl'));
+
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log(`Server is running on port ${port}`));
+
+
+
