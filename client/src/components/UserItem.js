@@ -21,10 +21,12 @@ const useStyles = makeStyles({
         width:'80px',
         height:'80px',
         alignSelf:'center',
+        boxShadow:'0px 0px 10px 3px rgba(31,127,155,0.6)'
     },
     title:{
         margin:'30px 0 15px',
         alignSelf:'center',
+        textTransform:'capitalize',
         fontSize:'min(2em, 10vw)',
     },
     body:{

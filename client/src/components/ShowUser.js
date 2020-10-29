@@ -5,7 +5,7 @@ import UserItem from './UserItem'
 function ShowUser({users}) {
     return (
         <>
-          <Grid container justify='center' alignItems='center'>
+          <Grid container justify='center' spacing={4} alignItems='center'>
             {
                 users.map((user) => (<Grid item key={user.id}> 
                                     <UserItem  user={user}/>
